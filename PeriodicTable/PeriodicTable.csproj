@@ -110,7 +110,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ElementUtilities\IAtom.cs" />
     <Compile Include="ElementUtilities\ElementGroups.cs" />
     <Compile Include="ElementUtilities\ElementTypes.cs" />
     <Compile Include="Views\ErrorLoggerWindow.xaml.cs">
