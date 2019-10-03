@@ -159,8 +159,5 @@
   <ItemGroup>
     <Resource Include="Resources\Images\radiation.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ReadMe.txt" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
