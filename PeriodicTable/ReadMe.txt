@@ -28,4 +28,6 @@ i should also mention, you dont need to mess with anything inside the Views, Vie
 all of the "showing info in the windows" is done for you, you just need to add the new elements and tell the elementnamematcher where to get it from basically.
 
 Other stuff:
-If you want to change how transparent the radioactive icon is in the periodic table, go into the class MainViewModel and at the top there's a public double RadioactiveIconOpacity. it's by default at 0.1. WPF is a bit iffy and the max opacity is 1, lowest is 0, half transparent is 0.5. you can mess about with that to your liking
+If you want to change how transparent the radioactive icon is in the periodic table, go into the class MainViewModel and at the top 
+there's a public double RadioactiveIconOpacity. it's by default at 0.1. WPF is a bit iffy and the max opacity is 1, lowest is 0, half 
+transparent is 0.5. you can mess about with that to your liking
