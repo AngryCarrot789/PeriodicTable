@@ -1,4 +1,4 @@
-﻿# Periodic Table in C#
+# Periodic Table in C#
  made using C# and WPF as it's UI features are very nice. and because it would be easier than anything else.
 
 ## For if you know a bit about C# and WPF
