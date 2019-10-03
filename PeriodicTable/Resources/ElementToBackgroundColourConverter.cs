@@ -1,4 +1,5 @@
 ﻿using PeriodicTable.ElementUtilities;
+using PeriodicTable.Resources;
 using System;
 using System.Globalization;
 using System.Windows.Data;
@@ -16,17 +17,17 @@ namespace PeriodicTable
             SolidColorBrush brush = new SolidColorBrush(Color.FromRgb(10, 10, 10));
             switch((ElementGroups)value)
             {
-                case ElementGroups.AlkaliMetal:         brush = new SolidColorBrush(Color.FromRgb(224, 175, 25)); break;
-                case ElementGroups.AlkaliEarthMetal:    brush = new SolidColorBrush(Color.FromRgb(207, 207, 27)); break;
-                case ElementGroups.Lanthanide:          brush = new SolidColorBrush(Color.FromRgb(255, 117, 47)); break;
-                case ElementGroups.Actinide:            brush = new SolidColorBrush(Color.FromRgb(253, 145, 218)); break;
-                case ElementGroups.TransitionMetal:     brush = new SolidColorBrush(Color.FromRgb(247, 94, 94)); break;
-                case ElementGroups.UnknownProperties:   brush = new SolidColorBrush(Color.FromRgb(210, 210, 210)); break;
-                case ElementGroups.PostTransitionMetal: brush = new SolidColorBrush(Color.FromRgb(62, 187, 142)); break;
-                case ElementGroups.Metalloid:           brush = new SolidColorBrush(Color.FromRgb(45, 184, 68)); break;
-                case ElementGroups.OtherNonMetal:       brush = new SolidColorBrush(Color.FromRgb(19, 220, 19)); break;
-                case ElementGroups.Halogen:             brush = new SolidColorBrush(Color.FromRgb(131, 255, 45)); break;
-                case ElementGroups.NobleGas:            brush = new SolidColorBrush(Color.FromRgb(41, 153, 222)); break;
+                case ElementGroups.AlkaliMetal:         brush = ElementGroupColours.AlkaliMetal; break;
+                case ElementGroups.AlkaliEarthMetal:    brush = ElementGroupColours.AlkaliEarthMetal; break;
+                case ElementGroups.Lanthanide:          brush = ElementGroupColours.Lanthanide; break;
+                case ElementGroups.Actinide:            brush = ElementGroupColours.Actinide; break;
+                case ElementGroups.TransitionMetal:     brush = ElementGroupColours.TransitionMetal; break;
+                case ElementGroups.UnknownProperties:   brush = ElementGroupColours.UnknownProperties; break;
+                case ElementGroups.PostTransitionMetal: brush = ElementGroupColours.PostTransitionMetal; break;
+                case ElementGroups.Metalloid:           brush = ElementGroupColours.Metalloid; break;
+                case ElementGroups.OtherNonMetal:       brush = ElementGroupColours.OtherNonMetal; break;
+                case ElementGroups.Halogen:             brush = ElementGroupColours.Halogen; break;
+                case ElementGroups.NobleGas:            brush = ElementGroupColours.NobleGas; break;
             }
             return brush;
         }

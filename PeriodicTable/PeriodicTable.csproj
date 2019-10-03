@@ -72,6 +72,7 @@
     <Compile Include="ElementFinder\ElementNameMatcher.cs" />
     <Compile Include="Elements\Element.cs" />
     <Compile Include="Elements\StaticElementHolder.cs" />
+    <Compile Include="Resources\ElementGroupColours.cs" />
     <Compile Include="Resources\ElementToBackgroundColourConverter.cs" />
     <Compile Include="Resources\RadioactiveIconVisibilityConverter.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
