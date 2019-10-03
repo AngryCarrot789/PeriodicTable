@@ -40,16 +40,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net462\ControlzEx.dll</HintPath>
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
     </Reference>
     <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net47\MahApps.Metro.dll</HintPath>
+      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net46\MahApps.Metro.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net462\System.Windows.Interactivity.dll</HintPath>
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,28 +70,17 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ElementFinder\ElementNameMatcher.cs" />
-    <Compile Include="Elements\AlkaliMetals\Lithium.cs" />
-    <Compile Include="Elements\AlkaliMetals\Potassium.cs" />
-    <Compile Include="Elements\AlkaliMetals\Sodium.cs" />
-    <Compile Include="Elements\DemoElement.cs" />
     <Compile Include="Elements\Element.cs" />
-    <Compile Include="Elements\Metalloids\Boron.cs" />
-    <Compile Include="Elements\NobleGasses\Argon.cs" />
-    <Compile Include="Elements\NobleGasses\Helium.cs" />
-    <Compile Include="Elements\NobleGasses\Neon.cs" />
-    <Compile Include="Elements\OtherNonMetals\Carbon.cs" />
-    <Compile Include="Elements\OtherNonMetals\Hydrogen.cs" />
-    <Compile Include="Elements\StaticHolder\StaticElementHolder.cs" />
-    <Compile Include="Elements\TransitionMetals\Aluminium.cs" />
-    <Compile Include="ElementUtilities\IElement.cs" />
+    <Compile Include="Elements\StaticElementHolder.cs" />
     <Compile Include="Resources\ElementToBackgroundColourConverter.cs" />
+    <Compile Include="Resources\RadioactiveIconVisibilityConverter.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\Command.cs" />
     <Compile Include="ViewModels\CommandsViewModel.cs" />
+    <Compile Include="ViewModels\LoggerWindow.cs" />
     <Compile Include="Views\ElementPresenter.xaml.cs">
       <DependentUpon>ElementPresenter.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Elements\TransitionMetals\Iron.cs" />
     <Compile Include="Units\Units\Density.cs" />
     <Compile Include="Units\Units\DensityUnits.cs" />
     <Compile Include="Units\Units\Mass.cs" />
@@ -101,6 +90,10 @@
     <Compile Include="Units\UnitTypes.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Page Include="Views\ElementPresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ErrorLoggerWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -119,6 +112,9 @@
     <Compile Include="ElementUtilities\IAtom.cs" />
     <Compile Include="ElementUtilities\ElementGroups.cs" />
     <Compile Include="ElementUtilities\ElementTypes.cs" />
+    <Compile Include="Views\ErrorLoggerWindow.xaml.cs">
+      <DependentUpon>ErrorLoggerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\IonicSolver.xaml.cs">
       <DependentUpon>IonicSolver.xaml</DependentUpon>
     </Compile>
@@ -154,12 +150,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\Images\atomic-128.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="atomic-128.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\radiation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,19 +1,13 @@
 ﻿using PeriodicTable.ElementUtilities;
 using PeriodicTable.Units.Units;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeriodicTable.Elements
 {
-    public class Element
+    public class Element : IAtom
     {
         public string ElementName { get; set; }
         public string ElementSymbol { get; set; }
         public double AtomicNumber { get; set; }
-
         public double AtomicMass { get; set; }
         public ElementGroups Group { get; set; }
         public Density Density { get; set; }
@@ -32,5 +26,7 @@ namespace PeriodicTable.Elements
         public int Protons { get; set; }
         public int Neutrons { get; set; }
         public int Electrons { get; set; }
+
+        public bool Radioactive { get; set; }
     }
 }

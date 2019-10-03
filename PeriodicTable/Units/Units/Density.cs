@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PeriodicTable.Units.Units
 {
-public class Density : IComparable, IComparable<Density>, IEquatable<Density>, IConvertible
+    public class Density : IComparable, IComparable<Density>, IEquatable<Density>, IConvertible
     {
         public const double MaxValue = 4294967295;
         public const double MinValue = 0;

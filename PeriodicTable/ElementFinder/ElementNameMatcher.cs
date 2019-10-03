@@ -1,37 +1,36 @@
 ﻿using PeriodicTable.Elements;
-using PeriodicTable.ElementUtilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+using PeriodicTable.ViewModels;
 
 namespace PeriodicTable.ElementFinder
 {
     public static class ElementNameMatcher
     {
-        public static IElement FindElementFromString(string elementName)
+        public static Element FindElementFromString(string elementName)
         {
             switch(elementName)
             {
                 case "Li": return StaticElementHolder.Lithium;
-                case "K": return StaticElementHolder.Potassium;
+                case "K":  return StaticElementHolder.Potassium;
                 case "Na": return StaticElementHolder.Sodium;
 
-                case "B": return StaticElementHolder.Boron;
+                case "B":  return StaticElementHolder.Boron;
 
                 case "Ar": return StaticElementHolder.Argon;
                 case "He": return StaticElementHolder.Helium;
                 case "Ne": return StaticElementHolder.Neon;
 
-                case "C": return StaticElementHolder.Carbon;
-                case "H": return StaticElementHolder.Hydrogen;
+                case "C":  return StaticElementHolder.Carbon;
+                case "H":  return StaticElementHolder.Hydrogen;
 
                 case "Al": return StaticElementHolder.Aluminium;
                 case "Fe": return StaticElementHolder.Iron;
+
+                case "U": return StaticElementHolder.Uranium;
             }
-            MessageBox.Show($"Couldn't find element: {elementName}");
+            if (!LoggerWindow.WindowVisible) {
+                LoggerWindow.ShowWindow();
+            }
+            LoggerWindow.AddError("Couldn't find element", elementName);
             return null;
         }
     }

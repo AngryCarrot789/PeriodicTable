@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:PeriodicTable" Closed="MetroWindow_Closed"
         xmlns:viewmodels="clr-namespace:PeriodicTable.ViewModels"
         mc:Ignorable="d" ResizeMode="NoResize"
-        Title="Periodic Table" Height="708.5" Width="1376"
+        Title="Periodic Table" Height="708.5" Width="1163"
         GlowBrush="#FF272727" 
         NonActiveGlowBrush="#FF323232"
         NonActiveWindowTitleBrush="#FF323232"
@@ -80,7 +80,12 @@
                 <Button Content="K" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}"  CommandParameter="K"  Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFE0AF19" Foreground="Black"/>
                 <Button Content="Rb" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Rb" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFE0AF19" Foreground="Black"/>
                 <Button Content="Cs" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cs" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFE0AF19" Foreground="Black"/>
-                <Button Content="Fr" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Fr" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFE0AF19" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Fr" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFE0AF19" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Fr"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -89,7 +94,12 @@
                 <Button Content="Ca" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ca" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFCFCF1B" Foreground="Black"/>
                 <Button Content="Sr" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Sr" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFCFCF1B" Foreground="Black"/>
                 <Button Content="Ba" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ba" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFCFCF1B" Foreground="Black"/>
-                <Button Content="Ra" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ra" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFCFCF1B" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ra" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFCFCF1B" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Ra"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -100,7 +110,12 @@
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
                 <Button Content="La" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="La" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Ac" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ac" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ac" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Ac"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -109,9 +124,19 @@
                 <Button Content="Ti" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ti" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Zr" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Zr" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Hf" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Hf" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Rf" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Rf" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Rf" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Rf"/>
+                    </Grid>
+                </Button>
                 <Button Content="Ce" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ce" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Th" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Th" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Th" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Th"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -120,9 +145,19 @@
                 <Button Content="V" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False"  Command="{Binding UpdateElementCommand}" CommandParameter="V"  Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Nb" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Nb" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="ta" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="ta" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="db" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="db" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Db" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Db"/>
+                    </Grid>
+                </Button>
                 <Button Content="Pr" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pr" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Pa" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pa" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pa" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Pa"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -131,20 +166,50 @@
                 <Button Content="Cr" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cr" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Mo" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Mo" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="W" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False"  Command="{Binding UpdateElementCommand}" CommandParameter="W"  Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Sg" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Sg" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Sg" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Sg"/>
+                    </Grid>
+                </Button>
                 <Button Content="Nd" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Nd" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="U" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False"  Command="{Binding UpdateElementCommand}" CommandParameter="U"  Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False"  Command="{Binding UpdateElementCommand}" CommandParameter="U"  Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="U"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
                 <Button Content="Mn" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Mn" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Tc" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Tc" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Tc" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Tc"/>
+                    </Grid>
+                </Button>
                 <Button Content="Re" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Re" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Bh" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Bh" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Pm" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pm" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Np" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Np" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Bh" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Bh"/>
+                    </Grid>
+                </Button>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pm" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Pm"/>
+                    </Grid>
+                </Button>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Np" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Np"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -153,9 +218,19 @@
                 <Button Content="Fe" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Fe" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Ru" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ru" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Os" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Os" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Hs" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Hs" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Hs" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Hs"/>
+                    </Grid>
+                </Button>
                 <Button Content="Sm" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Sm" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Pu" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pu" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pu" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Pu"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -164,9 +239,19 @@
                 <Button Content="Co" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Co" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Rh" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Rh" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Ir" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ir" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Mt" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Mt" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Mt" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Mt"/>
+                    </Grid>
+                </Button>
                 <Button Content="Eu" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Eu" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Am" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Am" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Am" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Am"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -175,9 +260,19 @@
                 <Button Content="Ni" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ni" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Pd" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pd" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Pt" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pt" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Ds" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ds" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ds" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Ds"/>
+                    </Grid>
+                </Button>
                 <Button Content="Gd" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Gd" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Cm" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cm" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cm" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Cm"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -186,9 +281,19 @@
                 <Button Content="Cu" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cu" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Ag" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ag" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Au" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Au" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Rg" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Rg" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Rg" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Rg"/>
+                    </Grid>
+                </Button>
                 <Button Content="Tb" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Tb" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Bk" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Bk" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Bk" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Bk"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -197,9 +302,19 @@
                 <Button Content="Zn" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Zn" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Cd" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cd" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
                 <Button Content="Hg" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Hg" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
-                <Button Content="Cn" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cn" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cn" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFF75E5E" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Cn"/>
+                    </Grid>
+                </Button>
                 <Button Content="Dy" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Dy" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Cf" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cf" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cf" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Cf"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -208,9 +323,19 @@
                 <Button Content="Ga" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ga" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB8E" Foreground="Black"/>
                 <Button Content="In" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="In" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB77" Foreground="Black"/>
                 <Button Content="Ti" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ti" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB77" Foreground="Black"/>
-                <Button Content="Nh" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Nh" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Nh" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Nh"/>
+                    </Grid>
+                </Button>
                 <Button Content="Ho" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ho" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Es" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Es" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Es" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Es"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -219,9 +344,19 @@
                 <Button Content="Ge" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ge" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2DB844" Foreground="Black"/>
                 <Button Content="Sn" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Sn" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB77" Foreground="Black"/>
                 <Button Content="Pb" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Pb" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB77" Foreground="Black"/>
-                <Button Content="Fl" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Fl" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB77" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Fl" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB77" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Fl"/>
+                    </Grid>
+                </Button>
                 <Button Content="Er" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Er" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Fm" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Fm" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Fm" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Fm"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -230,9 +365,19 @@
                 <Button Content="As" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="As" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2DB844" Foreground="Black"/>
                 <Button Content="Sb" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Sb" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2DB844" Foreground="Black"/>
                 <Button Content="Bi" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Bi" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB77" Foreground="Black"/>
-                <Button Content="Mc" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Mc" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Uup" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Uup"/>
+                    </Grid>
+                </Button>
                 <Button Content="Tm" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Tm" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Md" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Md" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Md" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Md"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -240,10 +385,25 @@
                 <Button Content="S" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False"  Command="{Binding UpdateElementCommand}" CommandParameter="S"  Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF13DC13" Foreground="Black"/>
                 <Button Content="Se" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Se" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF13DC13" Foreground="Black"/>
                 <Button Content="Te" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Te" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2DB844" Foreground="Black"/>
-                <Button Content="Po" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Po" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB77" Foreground="Black"/>
-                <Button Content="Lv" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Lv" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Po" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF3EBB77" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Pa"/>
+                    </Grid>
+                </Button>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Lv" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Lv"/>
+                    </Grid>
+                </Button>
                 <Button Content="Yb" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Yb" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="No" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="No" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="No" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="No"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -251,10 +411,25 @@
                 <Button Content="Cl" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Cl" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF83FF2D" Foreground="Black"/>
                 <Button Content="Br" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Br" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF83FF2D" Foreground="Black"/>
                 <Button Content="I" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False"  Command="{Binding UpdateElementCommand}" CommandParameter="I"  Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF83FF2D" Foreground="Black"/>
-                <Button Content="At" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="At" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF83FF2D" Foreground="Black"/>
-                <Button Content="Ts" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ts" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="At" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF83FF2D" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Pa"/>
+                    </Grid>
+                </Button>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Uus" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Uus"/>
+                    </Grid>
+                </Button>
                 <Button Content="Lu" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Lu" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFF752F" Foreground="Black"/>
-                <Button Content="Lr" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Lr" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Lr" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FFFD91DA" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Lr"/>
+                    </Grid>
+                </Button>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Button Content="He" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="He" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2999DE" Foreground="Black"/>
@@ -262,8 +437,18 @@
                 <Button Content="Ar" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Ar" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2999DE" Foreground="Black"/>
                 <Button Content="Kr" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Kr" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2999DE" Foreground="Black"/>
                 <Button Content="Xe" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Xe" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2999DE" Foreground="Black"/>
-                <Button Content="Rn" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Rn" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2999DE" Foreground="Black"/>
-                <Button Content="Og" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Og" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2"/>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Rn" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF2999DE" Foreground="Black">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Pa"/>
+                    </Grid>
+                </Button>
+                <Button Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Uuo" Controls:ControlsHelper.ContentCharacterCasing="Normal" Foreground="Black" Background="#FFD2D2D2">
+                    <Grid>
+                        <Image Opacity="{Binding RadioactiveIconOpacity}" Source="/PeriodicTable;component/Resources/Images/radiation.png"/>
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Uuo"/>
+                    </Grid>
+                </Button>
             </StackPanel>
         </StackPanel>
         <Grid Height="184" Margin="126,86,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="624">
@@ -343,9 +528,6 @@
                     </TextBlock.LayoutTransform>
                 </TextBlock>
             </Grid>
-        </Grid>
-        <Grid HorizontalAlignment="Right" Width="208">
-            <Button Command="{Binding Commands.ShowIonicSolverCommand}" Content="Ionic Solver" Margin="10,10,10,0" VerticalAlignment="Top" Height="47" BorderBrush="{x:Null}"/>
         </Grid>
     </Grid>
 </Controls:MetroWindow>
