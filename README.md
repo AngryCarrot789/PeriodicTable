@@ -1,6 +1,7 @@
 # Periodic Table in C#
  made using C# and WPF as it's UI features are very nice. and because it would be easier than anything else.
-
+## Latest update
+![](latestupdateimg.png)
 ## For if you know a bit about C# and WPF
  the program works by using Button commands and command parameters. the parameters are the symbols of the elements, 
  so if you change the iron button's command parameter to Cu, it'll basically be like clicking copper, not iron.
