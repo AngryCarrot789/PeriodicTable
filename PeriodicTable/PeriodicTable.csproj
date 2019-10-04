@@ -69,8 +69,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ElementFinder\ElementGroupNameMatcher.cs" />
     <Compile Include="ElementFinder\ElementNameMatcher.cs" />
     <Compile Include="Elements\Element.cs" />
+    <Compile Include="Elements\ElementGroup.cs" />
+    <Compile Include="Elements\StaticElementGroupHolder.cs" />
     <Compile Include="Elements\StaticElementHolder.cs" />
     <Compile Include="Resources\ElementGroupColours.cs" />
     <Compile Include="Resources\ElementToBackgroundColourConverter.cs" />
@@ -79,6 +82,9 @@
     <Compile Include="ViewModels\Command.cs" />
     <Compile Include="ViewModels\CommandsViewModel.cs" />
     <Compile Include="ViewModels\LoggerWindow.cs" />
+    <Compile Include="Views\ElementGroupPresenter.xaml.cs">
+      <DependentUpon>ElementGroupPresenter.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ElementPresenter.xaml.cs">
       <DependentUpon>ElementPresenter.xaml</DependentUpon>
     </Compile>
@@ -90,6 +96,10 @@
     <Compile Include="Units\Units\TempratureUnits.cs" />
     <Compile Include="Units\UnitTypes.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Page Include="Views\ElementGroupPresenter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ElementPresenter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

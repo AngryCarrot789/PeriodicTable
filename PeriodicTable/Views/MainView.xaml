@@ -129,9 +129,9 @@
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
                 <Button Content="Sc" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False" Command="{Binding UpdateElementCommand}" CommandParameter="Sc" Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF7CC5E0" Foreground="Black"/>
-                <Button Content="Y" Width="60" Height="60" Margin="0 0 0 3" BorderBrush="{x:Null}" FontSize="20" Focusable="False"  Command="{Binding UpdateElementCommand}" CommandParameter="Y"  Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF7CC5E0" Foreground="Black"/>
-                <Rectangle Height="60" Margin="0,0,0,3" Focusable="False" Fill="#FFE64897"/>
-                <Rectangle Height="60" Margin="0,0,0,3" Focusable="False" Fill="#FF7255BF"/>
+                <Button Content="Y" Width="60" Height="60" Margin="0 0 0 3"  BorderBrush="{x:Null}" FontSize="20" Focusable="False"  Command="{Binding UpdateElementCommand}" CommandParameter="Y"  Controls:ControlsHelper.ContentCharacterCasing="Normal" Background="#FF7CC5E0" Foreground="Black"/>
+                <Button Height="60" BorderBrush="{x:Null}" Margin="0,0,0,3" Focusable="False" Background="#FFE64897"/>
+                <Button Height="60" BorderBrush="{x:Null}" Margin="0,0,0,3" Focusable="False" Background="#FF7255BF"/>
             </StackPanel>
             <StackPanel Width="60" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3 0 0 0">
                 <Rectangle Width="60" Height="60" Margin="0 0 0 3"/>
@@ -479,82 +479,82 @@
             <GroupBox Margin="0,0,278,0" Header="Metals" Background="#CC323232" BorderBrush="#CC323232">
                 <Grid>
                     <StackPanel Orientation="Horizontal">
-                        <Grid Background="#FFF1B90A" Width="37" Margin="0 0 3 0">
-                            <TextBlock Text="Alkali Metals" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black">
+                        <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="AlkaliMetal" Background="#FFF1B90A" Width="37" Margin="0 0 3 0" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                            <TextBlock Text="Alkali Metals" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black" FontWeight="Normal">
                                 <TextBlock.LayoutTransform>
                                     <RotateTransform Angle="90"/>
                                 </TextBlock.LayoutTransform>
                             </TextBlock>
-                        </Grid>
-                        <Grid Background="#FFDCDC0E" Width="46" Margin="0 0 3 0">
-                            <TextBlock Text="Alkali Earth Metals" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Foreground="Black">
+                        </Button>
+                        <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="AlkaliEarthMetal" Background="#FFDCDC0E" Width="46" Margin="0 0 3 0" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                            <TextBlock Text="Alkali Earth Metals" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Foreground="Black" FontWeight="Normal">
                                 <TextBlock.LayoutTransform>
                                     <RotateTransform Angle="90"/>
                                 </TextBlock.LayoutTransform>
                             </TextBlock>
-                        </Grid>
+                        </Button>
                         <Grid Margin="0 0 3 0" Width="139">
-                            <Grid Background="#FFE64897" Height="73" VerticalAlignment="Top">
-                                <TextBlock Text="Lanthanoids" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="Black"/>
-                            </Grid>
-                            <Grid Background="#FF7255BF" Height="73" VerticalAlignment="Bottom">
-                                <TextBlock Text="Actinoids" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="Black"/>
-                            </Grid>
+                            <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="Lanthanide" Background="#FFE64897" Height="73" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                                <TextBlock Text="Lanthanoids" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black" FontWeight="Normal"/>
+                            </Button>
+                            <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="Actinide" Background="#FF7255BF" Height="73" VerticalAlignment="Bottom" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                                <TextBlock Text="Actinoids" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="Black" FontWeight="Normal"/>
+                            </Button>
                         </Grid>
-                        <Grid Background="#FF7CC5E0" Width="50" Margin="0 0 3 0">
-                            <TextBlock Text="Transition Metals" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="Black">
+                        <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="TransitionMetal" Background="#FF7CC5E0" Width="50" Margin="0 0 3 0" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                            <TextBlock Text="Transition Metals" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Foreground="Black" FontWeight="Normal">
                                 <TextBlock.LayoutTransform>
                                     <RotateTransform Angle="90"/>
                                 </TextBlock.LayoutTransform>
                             </TextBlock>
-                        </Grid>
-                        <Grid Background="#FF1FC590" Width="52">
-                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Foreground="Black">
+                        </Button>
+                        <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="PostTransitionMetal" Background="#FF1FC590" Width="52" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="16" Foreground="Black" FontWeight="Normal">
                                 <TextBlock.LayoutTransform>
                                     <RotateTransform Angle="90"/>
                                 </TextBlock.LayoutTransform><Run Text="Post-Transition"/><LineBreak/><Run Text="Metals"/></TextBlock>
-                        </Grid>
+                        </Button>
                     </StackPanel>
                 </Grid>
             </GroupBox>
-            <Grid Background="#FF2DB844" Margin="351,0,228,0">
-                <TextBlock Text="Metalloids" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="Black">
+            <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="Metalloid" Background="#FF2DB844" Margin="351,0,228,0" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                <TextBlock Text="Metalloids" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="Black" FontWeight="Normal">
                     <TextBlock.LayoutTransform>
                         <RotateTransform Angle="90"/>
                     </TextBlock.LayoutTransform>
                 </TextBlock>
-            </Grid>
+            </Button>
             <GroupBox Margin="446,0,0,0" Header="Non-Metals" Background="#CC323232" BorderBrush="#CC323232">
                 <StackPanel Orientation="Horizontal">
-                    <Grid Background="#FF50DA01" Width="72" Margin="0 0 3 0">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black"><Run Text="Other "/><LineBreak/><Run Text="Non"/><LineBreak/><Run Text="Metals"/></TextBlock>
-                    </Grid>
-                    <Grid Background="#FF88FF25" Width="45" Margin="0 0 3 0">
-                        <TextBlock Text="Halogens" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black">
+                    <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="OtherNonMetal" Background="#FF50DA01" Width="72" Margin="0 0 3 0" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="Black" FontWeight="Normal"><Run Text="Other "/><LineBreak/><Run Text="Non"/><LineBreak/><Run Text="Metals"/></TextBlock>
+                    </Button>
+                    <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="Halogen" Background="#FF88FF25" Width="45" Margin="0 0 3 0" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                        <TextBlock Text="Halogens" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black" FontWeight="Normal">
                             <TextBlock.LayoutTransform>
                                 <RotateTransform Angle="90"/>
                             </TextBlock.LayoutTransform>
                         </TextBlock>
-                    </Grid>
-                    <Grid Background="#FF2999DE" Width="45">
-                        <TextBlock Text="Noble Gasses" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black">
+                    </Button>
+                    <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="NobleGas" Background="#FF2999DE" Width="45" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                        <TextBlock Text="Noble Gasses" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="Black" FontWeight="Normal">
                             <TextBlock.LayoutTransform>
                                 <RotateTransform Angle="90"/>
                             </TextBlock.LayoutTransform>
                         </TextBlock>
-                    </Grid>
+                    </Button>
                 </StackPanel>
             </GroupBox>
-            <Grid Background="#FFD2D2D2" Margin="401,0,183,0">
-                <TextBlock Text="Unknown" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="Black">
+            <Button Command="{Binding ShowElementGroupInfoCommand}" CommandParameter="UnknownProperties" Background="#FFD2D2D2" Margin="401,0,183,0" BorderBrush="{x:Null}" Foreground="{x:Null}" Focusable="False">
+                <TextBlock Text="Unknown" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="24" Foreground="Black" FontWeight="Normal">
                     <TextBlock.LayoutTransform>
                         <RotateTransform Angle="90"/>
                     </TextBlock.LayoutTransform>
                 </TextBlock>
-            </Grid>
+            </Button>
         </Grid>
         <Grid Margin="68,0,0,0" Height="200" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="189">
-            <Rectangle Fill="#FF7255BF" HorizontalAlignment="Left" Height="102" Margin="133,65,0,0" VerticalAlignment="Top" Width="10"/>
+            <Rectangle Fill="#FF7255BF" HorizontalAlignment="Left" Height="109" Margin="133,58,0,0" VerticalAlignment="Top" Width="10"/>
             <Rectangle Fill="#FF7255BF" HorizontalAlignment="Left" Height="10" Margin="133,157,0,0" VerticalAlignment="Top" Width="44"/>
             <Rectangle Fill="#FF7255BF" HorizontalAlignment="Left" Height="10" Margin="159,149,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.RenderTransform>
@@ -576,7 +576,7 @@
                     </TransformGroup>
                 </Rectangle.RenderTransform>
             </Rectangle>
-            <Rectangle Fill="#FFE64897" HorizontalAlignment="Left" Height="100" Margin="151,2,0,0" VerticalAlignment="Top" Width="10"/>
+            <Rectangle Fill="#FFE64897" HorizontalAlignment="Left" Height="102" Margin="151,0,0,0" VerticalAlignment="Top" Width="10"/>
             <Rectangle Fill="#FFE64897" HorizontalAlignment="Left" Height="8" Margin="151,94,0,0" VerticalAlignment="Top" Width="30"/>
             <Rectangle Fill="#FFE64897" HorizontalAlignment="Left" Height="6" Margin="169,90,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="0.5,0.5">
                 <Rectangle.RenderTransform>

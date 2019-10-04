@@ -5,8 +5,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PeriodicTable"
-                      xmlns:resources="clr-namespace:PeriodicTable.Resources"
-                      mc:Ignorable="d" 
+        xmlns:resources="clr-namespace:PeriodicTable.Resources"
+        mc:Ignorable="d" 
         Topmost="True" 
         Closing="MetroWindow_Closing"
         Title="ElementPresenter" 
@@ -36,7 +36,7 @@
             <TextBlock Text="Melting Point:"                                                FontFamily="Segoe UI Light" FontSize="24" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock Text="Boiling Point:"                                                FontFamily="Segoe UI Light" FontSize="24" HorizontalAlignment="Left" Margin="10,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock Text="Shell Arngemnt:"                                               FontFamily="Segoe UI Light" FontSize="24" HorizontalAlignment="Left" Margin="10,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBlock Text="Shell Count:"                                               FontFamily="Segoe UI Light" FontSize="24" HorizontalAlignment="Left" Margin="10,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <TextBlock Text="Shell Count:"                                                  FontFamily="Segoe UI Light" FontSize="24" HorizontalAlignment="Left" Margin="10,132,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock Text="{Binding MeltingPoint, UpdateSourceTrigger=PropertyChanged}"   FontFamily="Segoe UI Light" FontSize="24" HorizontalAlignment="Left" Margin="176,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock Text="{Binding BoilingPoint, UpdateSourceTrigger=PropertyChanged}"   FontFamily="Segoe UI Light" FontSize="24" HorizontalAlignment="Left" Margin="176,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock Text="{Binding ShellStructure, UpdateSourceTrigger=PropertyChanged}" FontFamily="Segoe UI Light" FontSize="16" HorizontalAlignment="Left" Margin="176,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>

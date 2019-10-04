@@ -1,0 +1,21 @@
+﻿<Window x:Class="PeriodicTable.Views.ElementGroupPresenter"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PeriodicTable.Views"
+        xmlns:resources="clr-namespace:PeriodicTable.Resources"
+        xmlns:periodictable="clr-namespace:PeriodicTable"
+        mc:Ignorable="d" Closing="Window_Closing"
+        Title="ElementGroupPresenter" Height="393" Width="606.5">
+    <Window.Resources>
+        <periodictable:ElementToBackgroundColourConverter x:Key="converter"/>
+    </Window.Resources>
+    <Grid>
+        <Rectangle Fill="{Binding Path=Group, Converter={StaticResource converter}}" Opacity="0.8"/>
+        <TextBlock Text="{Binding MainInformationTitle, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="30"/>
+        <TextBlock Text="{Binding MainInformation,      UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="0,50,0,0"/>
+        <TextBlock Text="{Binding AtomInfoTitle,        UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="30" Margin="0,120,0,0"/>
+        <TextBlock Text="{Binding AtomInfo,             UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" Margin="0,170,0,0"/>
+    </Grid>
+</Window>

@@ -1,5 +1,6 @@
 ﻿using PeriodicTable.ElementFinder;
 using PeriodicTable.Elements;
+using PeriodicTable.Views;
 using System.Windows.Input;
 
 namespace PeriodicTable.ViewModels
@@ -7,22 +8,37 @@ namespace PeriodicTable.ViewModels
     public class MainViewModel : BaseViewModel
     {
         public double RadioactiveIconOpacity { get => 0.1; }
+
         public ICommand UpdateElementCommand { get; set; }
-        private ElementPresenter _presenter = new ElementPresenter();
+        public ICommand ShowElementGroupInfoCommand { get; set; }
+
+        private ElementPresenter ElementPresenter = new ElementPresenter();
+        private ElementGroupPresenter GroupPresenter = new ElementGroupPresenter();
         public CommandsViewModel Commands { get; set; } = new CommandsViewModel();
         public MainViewModel()
         {
-            UpdateElementCommand = new Command(Update);
+            UpdateElementCommand        = new Command(UpdateElementPresenter);
+            ShowElementGroupInfoCommand = new Command(ShowElementGroups);
         }
 
-        private void Update(object elementSymbol)
+        private void UpdateElementPresenter(object elementSymbol)
         {
             Element newContext = ElementNameMatcher.FindElementFromString(elementSymbol.ToString());
-            if (!_presenter.IsActive && newContext != null)
-                _presenter.Show();
+            if (!ElementPresenter.IsActive && newContext != null)
+                ElementPresenter.Show();
 
             if (newContext != null)
-                _presenter.DataContext = newContext;
+                ElementPresenter.DataContext = newContext;
+        }
+
+        private void ShowElementGroups(object groupName)
+        {
+            ElementGroup newContext = ElementGroupNameMatcher.FindElementGroupFromString(groupName.ToString());
+            if (!GroupPresenter.IsActive && newContext != null)
+                GroupPresenter.Show();
+
+            if (newContext != null)
+                GroupPresenter.DataContext = newContext;
         }
     }
 }
